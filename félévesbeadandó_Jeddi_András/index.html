@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taxi Register</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Taxi Flotta Kezelő</h1>
+            <button id="btn-new-car" class="btn btn-primary">Új autó felvétele</button>
+        </header>
+
+        <div id="error-box" class="error-box hidden"></div>
+
+        <section id="list-section">
+            <h2>Autóink</h2>
+            <div id="car-list" class="grid-container">
+                </div>
+        </section>
+
+        <section id="form-section" class="hidden">
+            <h2 id="form-title">Új autó hozzáadása</h2>
+            <form id="car-form">
+                <input type="hidden" id="car-id"> 
+                
+                <div class="form-group">
+                    <label for="car-brand">Márka:</label>
+                    <input type="text" id="car-brand" required>
+                </div>
+                <div class="form-group">
+                    <label for="car-model">Modell:</label>
+                    <input type="text" id="car-model" required>
+                </div>
+                <div class="form-group">
+                    <label for="car-owner">Tulajdonos:</label>
+                    <input type="text" id="car-owner" required>
+                </div>
+                <div class="form-group">
+                    <label for="car-date">Forgalomba helyezés:</label>
+                    <input type="date" id="car-date" required>
+                </div>
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="car-electric">
+                    <label for="car-electric">Elektromos autó</label>
+                </div>
+                <div class="form-group">
+                    <label for="car-fuel">Fogyasztás (l/100km):</label>
+                    <input type="number" step="0.1" id="car-fuel" required>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-success">Mentés</button>
+                    <button type="button" id="btn-cancel" class="btn btn-secondary">Mégse</button>
+                </div>
+            </form>
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
